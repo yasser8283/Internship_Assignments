@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="main">
+        <section class="hero">
+
+            <div class="left">
+                <h1>Build Something Amazing 🚀</h1>
+                <p>This is my responsive hero section using Flexbox.</p>
+                <button type="button" class="Start" id="startBtn" aria-label="Open Freepik animal photos">Start
+                    Now</button>
+            </div>
+
+            <div class="right">
+                <figure>
+                    <img loading="lazy"
+                        src="https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Close-up of a scarlet macaw (red parrot)">
+
+                </figure>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        (function () {
+            const url = 'https://www.freepik.com/free-photos-vectors/animal';
+            const btn = document.getElementById('startBtn');
+            if (btn) {
+                btn.addEventListener('click', function (e) {
+                    const newWin = window.open(url, '_blank');
+                    if (newWin) newWin.opener = null;
+                });
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
